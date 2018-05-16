@@ -4,15 +4,17 @@
 #include <cmath>
 
 using namespace std;
-Reta::Reta(float _x0, float _y0, float _x1, float _y1)
+Reta::Reta(int _x0, int _y0, int _x1, int _y1)
 {
     x0 = _x0;
-    y0= _y0;
+    y0 = _y0;
     x1 = _x1;
     y1 = _y1;
+
 }
 void Reta::draw(Screen &t)
 {
+
     int i;
     float x, y, tam, Dx, Dy;
 
@@ -25,16 +27,20 @@ void Reta::draw(Screen &t)
         tam = abs(y1-y0);
     }
 
-    Dx = (x1-x0)/tam;
-    Dy = (y1-y0)/tam;
+    Dx = abs(x1-x0)/tam;
+
+    Dy = abs(y1-y0)/tam;
 
     i = 1;
 
-    while(i< tam){
+
+    while(i <= tam){
         t.setPixel(round(x),round(y));
 
-        x= x + Dx;
+        x = x + Dx;
         y = y + Dy;
+
         i++;
     }
+
 }

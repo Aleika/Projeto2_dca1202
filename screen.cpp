@@ -8,16 +8,28 @@ Screen::Screen(int _nlin, int _ncol)
     nlin = _nlin;
     ncol = _ncol;
 
-    brush = '-';
+    brush = ' ';
 
     mat = vector<vector<char>>(nlin, vector<char>(ncol, 0));
+
+    for(int i=0;i<nlin;i++){
+        for(int j = 0;j<ncol;j++){
+            mat[i][j] = brush;
+        }
+    }
+
+}
+
+Screen::Screen()
+{
 
 }
 
 void Screen::setPixel(int x, int y)
 {
-    mat[x-1][y-1] = brush;
-
+    if(x>=0 && y>=0){
+            mat[x][y]=brush;
+    }
 }
 
 void Screen::clear()
@@ -41,8 +53,8 @@ ostream& operator<<(ostream &os, Screen &t)
         for(int j = 0;j<t.ncol;j++){
             os << t.mat[i][j];
         }
-        cout << endl;
+        os << endl;
     }
 
-  return os;
+  return (os);
 }

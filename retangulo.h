@@ -11,19 +11,23 @@ class Retangulo : public FiguraGeometrica
     /**
      * @brief x armazena a coordenada x do canto superior esquerdo do retângulo
      */
-    float x;
+    int x;
     /**
      * @brief y armazena a coordenada y do canto superior esquerdo do retângulo
      */
-    float y;
+    int y;
     /**
      * @brief largura armazena o valor referente à largura do retângulo
      */
-    float largura;
+    int largura;
     /**
      * @brief altura armazena o valor referente à altura do retângulo
      */
-    float altura;
+    int altura;
+    /**
+     * @brief mode
+     */
+    int mode;
 public:
     /**
    * @brief Retangulo Método recebe as coordenadas do canto superior do retângulo, largura e altura.
@@ -32,10 +36,10 @@ public:
    * @param _largura largura do retângulo
    * @param _altura altura do retângulo
    */
-  Retangulo(float _x, float _y, float _largura, float _altura);
+  Retangulo(int _x, int _y, int _largura, int _altura, int _mode);
   /**
    * @brief draw Método responsável pelo desenho do retângulo
-   * @param t
+   * @param t parâmetro do tipo Screen, onde será desenhado o retângulo
    */
   void draw(Screen &t);
 };

@@ -34,7 +34,7 @@ public:
    * @param _ncol número de colunas para o desenho da tela
    */
   Screen(int _nlin, int _ncol);
-
+  Screen();
   /**
    * @brief setPixel Desenha um pixel da matriz
    * @param x recebe da coordenada x do pixel que se deseja modificar

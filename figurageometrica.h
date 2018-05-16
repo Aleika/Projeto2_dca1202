@@ -8,7 +8,14 @@
 class FiguraGeometrica
 {
 public:
+    /**
+   * @brief FiguraGeometrica Contrutor da classe
+   */
   FiguraGeometrica();
+  /**
+   * @brief draw Função virtual implementada nas classes derivadas
+   * @param t
+   */
   virtual void draw(Screen &t)=0;
 };
 

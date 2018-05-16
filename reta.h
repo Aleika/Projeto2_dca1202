@@ -11,19 +11,19 @@ class Reta : public FiguraGeometrica
     /**
      * @brief x0 armazena a coordenada x do primeiro ponto
      */
-    float x0;
+    int x0;
     /**
      * @brief y0 armazena a coordenda y do primeiro ponto
      */
-    float y0;
+    int y0;
     /**
      * @brief x1 armazena a coordenada x do segundo ponto
      */
-    float x1;
+    int x1;
     /**
      * @brief y1 armazena a coordenada y do segundo ponto
      */
-    float y1;
+    int y1;
 public:
     /**
    * @brief Reta Método que recebe
@@ -32,10 +32,10 @@ public:
    * @param _x1 coordenada x do segundo ponto
    * @param _y1 coordenada y do segundo ponto
    */
-  Reta(float _x0, float _y0, float _x1, float _y1);
+  Reta(int _x0, int _y0, int _x1, int _y1);
   /**
    * @brief draw Método responsável pelo desenho de uma reta
-   * @param t
+   * @param t parâmetro do tipo Screen, onde será desenhada a reta
    */
   void draw(Screen &t);
 };
